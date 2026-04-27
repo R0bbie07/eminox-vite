@@ -4,7 +4,7 @@ import SectionBadge from './SectionBadge';
 import BlurText from './BlurText';
 import Reveal from './Reveal';
 
-const ICON_MAP: Record<string, React.FC<{ size?: number; strokeWidth?: number }>> = {
+const ICON_MAP: Record<string, React.FC<{ size?: number; strokeWidth?: number; style?: React.CSSProperties }>> = {
   MapPin, FlaskConical, Users, CheckCircle,
 };
 

@@ -4,7 +4,7 @@ import SectionBadge from './SectionBadge';
 import BlurText from './BlurText';
 import Reveal from './Reveal';
 
-const ICONS: Record<string, React.FC<{ size?: number }>> = { Layers, Filter, Wind, Shield, Zap, Globe };
+const ICONS: Record<string, React.FC<{ size?: number; style?: React.CSSProperties }>> = { Layers, Filter, Wind, Shield, Zap, Globe };
 
 export default function Technology() {
   return (

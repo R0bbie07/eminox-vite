@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 const RINGS = [
   { rx: 310, ry: 105, label: 'Clean air', ang: 190 },
