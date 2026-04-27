@@ -1,10 +1,16 @@
-import { Layers, Filter, Wind, Shield, Zap, Globe } from 'lucide-react';
+import { Layers, Filter, Wind, Shield, Zap, Globe, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { SERVICES } from '../data';
 import SectionBadge from './SectionBadge';
 import BlurText from './BlurText';
 import Reveal from './Reveal';
 
 const ICONS: Record<string, React.FC<{ size?: number; style?: React.CSSProperties }>> = { Layers, Filter, Wind, Shield, Zap, Globe };
+const SLUGS: Record<string, string> = {
+  'SCRT®': 'scrt', 'CRT®': 'crt', 'SCR': 'scr',
+  'DPF': 'dpf', 'DOC': 'doc', 'Alt Fuels': 'alt-fuels',
+};
 
 export default function Technology() {
   return (
@@ -26,31 +32,30 @@ export default function Technology() {
           </p>
         </Reveal>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))',
-          gap: 1,
-          background: 'rgba(255,255,255,0.06)',
-        }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))', gap: 1, background: 'rgba(255,255,255,0.06)' }}>
           {SERVICES.map((s, i) => {
             const Icon = ICONS[s.icon];
+            const slug = SLUGS[s.title];
             return (
-              <Reveal key={s.title} delay={((i % 3) * 0.08)}>
-                <div
-                  className="glass glass-hover"
-                  style={{ padding: '40px 36px', minHeight: 220, display: 'flex', flexDirection: 'column', gap: 20, transition: 'background 0.3s, border-color 0.3s' }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-                    <span style={{
-                      fontFamily: 'var(--font-display)', fontSize: 44, color: 'var(--color-cobalt)',
-                      fontWeight: 400, letterSpacing: '0.005em', textTransform: 'uppercase', lineHeight: 1,
-                    }}>
-                      {s.title}
-                    </span>
-                    {Icon && <Icon size={18} style={{ color: 'rgba(243,237,228,0.35)', marginTop: 6 }} />}
-                  </div>
-                  <p style={{ fontSize: 14, lineHeight: 1.65, color: 'rgba(243,237,228,0.65)' }}>{s.body}</p>
-                </div>
+              <Reveal key={s.title} delay={(i % 3) * 0.08}>
+                <Link to={`/technology/${slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
+                  <motion.div
+                    className="glass"
+                    whileHover={{ backgroundColor: 'rgba(255,255,255,0.07)' }}
+                    style={{ padding: '40px 36px', minHeight: 220, display: 'flex', flexDirection: 'column', gap: 20, cursor: 'pointer', height: '100%' }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
+                      <span style={{ fontFamily: 'var(--font-display)', fontSize: 44, color: 'var(--color-cobalt)', fontWeight: 400, letterSpacing: '0.005em', textTransform: 'uppercase', lineHeight: 1 }}>
+                        {s.title}
+                      </span>
+                      <div style={{ display: 'flex', gap: 8 }}>
+                        {Icon && <Icon size={16} style={{ color: 'rgba(243,237,228,0.3)' }} />}
+                        <ArrowRight size={14} style={{ color: 'rgba(80,120,255,0.5)', marginTop: 2 }} />
+                      </div>
+                    </div>
+                    <p style={{ fontSize: 14, lineHeight: 1.65, color: 'rgba(243,237,228,0.65)', flex: 1 }}>{s.body}</p>
+                  </motion.div>
+                </Link>
               </Reveal>
             );
           })}
