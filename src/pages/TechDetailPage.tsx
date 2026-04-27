@@ -1,5 +1,4 @@
 import { useParams, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import PageHero from '../components/PageHero';
 import Reveal from '../components/Reveal';
 import { SCRTVisual, TechGenericVisual } from '../components/Visuals';
