@@ -80,7 +80,7 @@ export default function Stats() {
         if (p.y > canvas.height) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(61,122,58,${p.a * 0.5})`;
+        ctx.fillStyle = `rgba(27,79,216,${p.a * 0.5})`;
         ctx.fill();
       });
 
@@ -93,7 +93,7 @@ export default function Stats() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(61,122,58,${(1 - dist / 100) * 0.15})`;
+            ctx.strokeStyle = `rgba(27,79,216,${(1 - dist / 100) * 0.15})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

@@ -50,7 +50,7 @@ export default function Technology() {
                       </span>
                       <div style={{ display: 'flex', gap: 8 }}>
                         {Icon && <Icon size={16} style={{ color: 'rgba(243,237,228,0.3)' }} />}
-                        <ArrowRight size={14} style={{ color: 'rgba(61,122,58,0.5)', marginTop: 2 }} />
+                        <ArrowRight size={14} style={{ color: 'rgba(27,79,216,0.5)', marginTop: 2 }} />
                       </div>
                     </div>
                     <p style={{ fontSize: 14, lineHeight: 1.65, color: 'rgba(243,237,228,0.65)', flex: 1 }}>{s.body}</p>

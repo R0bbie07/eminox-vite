@@ -46,7 +46,7 @@ export default function OrbitalSVG() {
                 <circle
                   cx={nx} cy={ny}
                   r={isHov ? 5.5 : 3.5}
-                  fill={isHov ? '#3D7A3A' : 'hsl(40 18% 91%)'}
+                  fill={isHov ? '#1B4FD8' : 'hsl(40 18% 91%)'}
                   style={{
                     transition: 'all 0.2s',
                     animation: 'pulse-node 3s ease-in-out infinite',
@@ -55,7 +55,7 @@ export default function OrbitalSVG() {
                 <text
                   x={lx} y={ny + 4}
                   textAnchor={anchor}
-                  fill={isHov ? '#4A9447' : 'rgba(243,237,228,0.75)'}
+                  fill={isHov ? '#2563EB' : 'rgba(243,237,228,0.75)'}
                   fontSize={12}
                   fontFamily="'Inter', sans-serif"
                   style={{ transition: 'fill 0.2s', userSelect: 'none' }}
@@ -72,7 +72,7 @@ export default function OrbitalSVG() {
       <g style={{ animation: 'pulse-node 4s ease-in-out infinite' }}>
         <path d="M0 -20L13 0L0 20L-13 0Z" fill="hsl(40 18% 91%)" />
         <path d="M0 -12L7 0L0 12L-7 0Z"   fill="hsl(0 0% 4%)" />
-        <circle cx={0} cy={0} r={3} fill="#3D7A3A" />
+        <circle cx={0} cy={0} r={3} fill="#1B4FD8" />
       </g>
     </svg>
   );

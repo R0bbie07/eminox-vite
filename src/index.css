@@ -8,9 +8,9 @@
 @theme {
   --color-ink:      hsl(0 0% 4%);
   --color-cream:    hsl(40 18% 91%);
-  --color-cobalt:   #3D7A3A;
-  --color-cobalt-hi:#4A9447;
-  --color-terra:    #2E5C2C;
+  --color-cobalt:   #1B4FD8;
+  --color-cobalt-hi:#2563EB;
+  --color-terra:    #1E3A8A;
   --color-iron:     hsl(0 0% 12%);
 
   --font-display: 'Instrument Serif', Georgia, serif;

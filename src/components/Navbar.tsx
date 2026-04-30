@@ -42,10 +42,14 @@ export default function Navbar() {
     >
       <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 var(--section-px)', height: 64, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Logo */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', color: 'var(--color-cream)', textDecoration: 'none' }} aria-label="Eminox home">
-          <svg viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ height: 22, width: 'auto' }} aria-hidden="true">
-            <text x="0" y="26" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="28" letterSpacing="3" fill="currentColor">EMINOX</text>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'var(--color-cream)', textDecoration: 'none' }} aria-label="Eminox home">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ height: 32, width: 32, flexShrink: 0 }} aria-hidden="true">
+            <circle cx="16" cy="16" r="15" fill="white" />
+            <text x="16" y="22" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="900" fontSize="17" fill="#0A0A0A">E</text>
           </svg>
+          <span style={{ fontFamily: 'Arial, Helvetica, sans-serif', fontWeight: 700, fontSize: 18, letterSpacing: '0.06em', color: 'var(--color-cream)' }}>
+            Eminox
+          </span>
         </Link>
 
         {/* Desktop nav */}
