@@ -74,7 +74,10 @@ export default function Hero() {
             }}
           >
             The{' '}
-            <em style={{ fontStyle: 'italic', color: 'var(--color-cobalt)' }}>Emission</em>
+            <em style={{ fontStyle: 'italic', color: 'var(--color-cobalt)', position: 'relative', display: 'inline-block' }}>
+              Emission
+              <span aria-hidden="true" style={{ position: 'absolute', bottom: '-4px', left: 0, right: 0, height: 3, background: 'var(--color-cobalt)', borderRadius: 1, opacity: 0.7 }} />
+            </em>
             {' '}Engine
           </motion.h1>
 

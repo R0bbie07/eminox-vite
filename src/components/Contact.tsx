@@ -143,9 +143,9 @@ export default function Contact() {
       </div>
 
       <style>{`
-        .contact-input:focus { border-color: rgba(80,120,255,0.5) !important; }
+        .contact-input:focus { border-color: rgba(61,122,58,0.5) !important; }
         .contact-input::placeholder { color: rgba(243,237,228,0.2); }
-        .contact-submit:hover { background: rgba(80,120,255,0.85) !important; }
+        .contact-submit:hover { background: rgba(61,122,58,0.85) !important; }
         @media (max-width: 900px) {
           .contact-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
         }

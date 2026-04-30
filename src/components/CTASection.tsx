@@ -36,8 +36,8 @@ export default function CTASection() {
                 lineHeight: 1, textTransform: 'uppercase', letterSpacing: '0.005em',
                 color: '#fff', marginBottom: 20,
               }}>
-                Ready to make your fleet{' '}
-                <em style={{ fontStyle: 'italic' }}>compliant?</em>
+                Eminox.{' '}
+                <em style={{ fontStyle: 'italic' }}>Engineered for the work that still needs doing.</em>
               </h2>
               <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', maxWidth: 540, lineHeight: 1.65 }}>
                 Send us your brief. Fleet size, current standard, target standard, deadline.
